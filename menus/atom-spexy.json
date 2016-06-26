@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle atom-spexy",
+        "command": "atom-spexy:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "atom-spexy",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "atom-spexy:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

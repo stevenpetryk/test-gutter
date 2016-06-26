@@ -1,0 +1,21 @@
+{
+  "name": "atom-spexy",
+  "main": "./lib/atom-spexy",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "atom-spexy:toggle"
+  },
+  "repository": "https://github.com/atom/atom-spexy",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "concat-stream": "^1.5.1"
+  },
+  "standard": {
+    "globals": [ "atom" ]
+  }
+}
