@@ -7,7 +7,7 @@
   "consumedServices": {
     "test-gutter": {
       "versions": {
-        "0.2.4": "consumeTestRunner"
+        "^0.1.1": "consumeTestRunner"
       }
     }
   },
