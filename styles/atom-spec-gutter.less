@@ -7,23 +7,24 @@ atom-text-editor::shadow {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     .spec-gutter.spec-gutter-highlight {
-      width: 0.5em;
-      height: 0.5em !important;
-      border-radius: 50%;
-      border: 1px solid @text-color-subtle;
+      width: 7px;
+      height: 7px !important;
+      border-radius: 20%;
+      transform: rotate(45deg);
 
       &.status-passed {
-        border-color: @text-color-success;
+        background: @text-color-success;
       }
 
       &.status-failed {
-        border-color: @text-color-error;
+        background: @text-color-error;
       }
 
       &.status-pending {
-        border-color: @text-color-warning;
+        background: @text-color-subtle;
       }
     }
   }
