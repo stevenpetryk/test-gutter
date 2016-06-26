@@ -1,5 +1,21 @@
-# atom-spec-gutter package
+# Atom Spec Gutter
 
-A short description of your package.
+Shows RSpec example statuses in the gutter of your editor. Inspired by Xcode.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![Atom spec runner demo](http://i.imgur.com/54IMe75.gif)
+
+## Installation
+
+```bash
+apm install atom-spec-gutter
+```
+
+## Desired features
+
+* Ability to start and stop background loaders like Zeus
+* Ability to customize `rspec` command
+* Failure details when hovering over a marker
+
+## Help wanted
+
+I have no idea what I'm doing when it comes to Atom plugins, so feel free to contribute. I just wanted to make a sexier test runner than what was currently out there.
