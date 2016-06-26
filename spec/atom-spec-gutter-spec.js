@@ -1,7 +1,5 @@
 'use babel'
 
-import AtomSpexy from '../lib/atom-spec-gutter'
-
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
@@ -39,8 +37,8 @@ describe('AtomSpecGutter', () => {
         expect(atomSpexyPanel.isVisible()).toBe(true)
         atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle')
         expect(atomSpexyPanel.isVisible()).toBe(false)
-      });
-    });
+      })
+    })
 
     it('hides and shows the view', () => {
       // This test shows you an integration test testing at the view level.
@@ -49,25 +47,25 @@ describe('AtomSpecGutter', () => {
       // `toBeVisible()` matchers to work. Anything testing visibility or focus
       // requires that the workspaceElement is on the DOM. Tests that attach the
       // workspaceElement to the DOM are generally slower than those off DOM.
-      jasmine.attachToDOM(workspaceElement);
+      jasmine.attachToDOM(workspaceElement)
 
-      expect(workspaceElement.querySelector('.atom-spec-gutter')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-spec-gutter')).not.toExist()
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle')
 
       waitsForPromise(() => {
-        return activationPromise;
-      });
+        return activationPromise
+      })
 
       runs(() => {
         // Now we can test for view visibility
-        let atomSpexyElement = workspaceElement.querySelector('.atom-spec-gutter');
-        expect(atomSpexyElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle');
-        expect(atomSpexyElement).not.toBeVisible();
-      });
-    });
-  });
-});
+        let atomSpexyElement = workspaceElement.querySelector('.atom-spec-gutter')
+        expect(atomSpexyElement).toBeVisible()
+        atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle')
+        expect(atomSpexyElement).not.toBeVisible()
+      })
+    })
+  })
+})

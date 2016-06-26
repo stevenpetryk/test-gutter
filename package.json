@@ -7,6 +7,9 @@
   "activationCommands": {
     "atom-workspace": "atom-spec-gutter:toggle"
   },
+  "scripts": {
+    "test": "standard"
+  },
   "repository": "https://github.com/stevenpetryk/atom-spec-gutter",
   "license": "MIT",
   "engines": {
@@ -15,10 +18,24 @@
   "dependencies": {
     "concat-stream": "^1.5.1"
   },
+  "devDependencies": {
+    "standard": "*"
+  },
   "activationHooks": [
     "language-rspec:grammar-used"
   ],
   "standard": {
-    "globals": [ "atom", "expect", "describe", "runs" ]
+    "globals": [
+      "atom",
+      "expect",
+      "describe",
+      "runs",
+      "beforeEach",
+      "it",
+      "waitsForPromise",
+      "it",
+      "jasmine",
+      "waitsForPromise"
+    ]
   }
 }
