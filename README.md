@@ -1,4 +1,4 @@
-# atom-spexy package
+# atom-spec-gutter package
 
 A short description of your package.
 

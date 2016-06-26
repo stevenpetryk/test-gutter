@@ -1,44 +1,44 @@
-'use babel';
+'use babel'
 
-import AtomSpexy from '../lib/atom-spexy';
+import AtomSpexy from '../lib/atom-spec-gutter'
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('AtomSpexy', () => {
-  let workspaceElement, activationPromise;
+describe('AtomSpecGutter', () => {
+  let workspaceElement, activationPromise
 
   beforeEach(() => {
-    workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('atom-spexy');
-  });
+    workspaceElement = atom.views.getView(atom.workspace)
+    activationPromise = atom.packages.activatePackage('atom-spec-gutter')
+  })
 
-  describe('when the atom-spexy:toggle event is triggered', () => {
+  describe('when the atom-spec-gutter:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.atom-spexy')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-spec-gutter')).not.toExist()
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-spexy:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle')
 
       waitsForPromise(() => {
-        return activationPromise;
-      });
+        return activationPromise
+      })
 
       runs(() => {
-        expect(workspaceElement.querySelector('.atom-spexy')).toExist();
+        expect(workspaceElement.querySelector('.atom-spec-gutter')).toExist()
 
-        let atomSpexyElement = workspaceElement.querySelector('.atom-spexy');
-        expect(atomSpexyElement).toExist();
+        let atomSpexyElement = workspaceElement.querySelector('.atom-spec-gutter')
+        expect(atomSpexyElement).toExist()
 
-        let atomSpexyPanel = atom.workspace.panelForItem(atomSpexyElement);
-        expect(atomSpexyPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'atom-spexy:toggle');
-        expect(atomSpexyPanel.isVisible()).toBe(false);
+        let atomSpexyPanel = atom.workspace.panelForItem(atomSpexyElement)
+        expect(atomSpexyPanel.isVisible()).toBe(true)
+        atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle')
+        expect(atomSpexyPanel.isVisible()).toBe(false)
       });
     });
 
@@ -51,11 +51,11 @@ describe('AtomSpexy', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.atom-spexy')).not.toExist();
+      expect(workspaceElement.querySelector('.atom-spec-gutter')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'atom-spexy:toggle');
+      atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,9 +63,9 @@ describe('AtomSpexy', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let atomSpexyElement = workspaceElement.querySelector('.atom-spexy');
+        let atomSpexyElement = workspaceElement.querySelector('.atom-spec-gutter');
         expect(atomSpexyElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'atom-spexy:toggle');
+        atom.commands.dispatch(workspaceElement, 'atom-spec-gutter:toggle');
         expect(atomSpexyElement).not.toBeVisible();
       });
     });

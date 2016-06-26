@@ -1,13 +1,13 @@
 {
-  "name": "atom-spexy",
-  "main": "./lib/atom-spexy",
+  "name": "atom-spec-gutter",
+  "main": "./lib/atom-spec-gutter",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "atom-spexy:toggle"
+    "atom-workspace": "atom-spec-gutter:toggle"
   },
-  "repository": "https://github.com/atom/atom-spexy",
+  "repository": "https://github.com/stevenpetryk/atom-spec-gutter",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -19,6 +19,6 @@
     "language-rspec:grammar-used"
   ],
   "standard": {
-    "globals": [ "atom" ]
+    "globals": [ "atom", "expect", "describe", "runs" ]
   }
 }
