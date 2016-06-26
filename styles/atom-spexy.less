@@ -3,6 +3,34 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
+@import "octicon-utf-codes";
+@import "octicon-mixins";
 
-.atom-spexy {
+atom-text-editor,
+atom-text-editor::shadow {
+  .spexy-row {
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spexy-gutter.spexy-highlight {
+      width: 0.5em;
+      height: 0.5em !important;
+      border-radius: 50%;
+      border: 1px solid @text-color-subtle;
+
+      &.status-passed {
+        border-color: @text-color-success;
+      }
+
+      &.status-failed {
+        border-color: @text-color-error;
+      }
+
+      &.status-pending {
+        border-color: @text-color-warning;
+      }
+    }
+  }
 }
