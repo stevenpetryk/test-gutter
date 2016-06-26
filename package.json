@@ -1,6 +1,6 @@
 {
   "name": "atom-spec-gutter",
-  "main": "./lib/atom-spec-gutter",
+  "main": "./lib/main",
   "version": "0.1.0",
   "description": "RSpec results, right in your gutter.",
   "keywords": [],
