@@ -1,29 +1,29 @@
 {
-  "name": "atom-spec-gutter",
+  "name": "test-gutter",
   "main": "./lib/main",
-  "version": "0.2.4",
-  "description": "RSpec results, right in your gutter.",
+  "version": "0.0.0",
+  "description": "Test results, right in your gutter.",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "atom-spec-gutter:toggle"
+  "consumedServices": {
+    "test-gutter": {
+      "versions": {
+        "0.2.4": "consumeTestRunner"
+      }
+    }
   },
   "scripts": {
     "test": "standard"
   },
-  "repository": "https://github.com/stevenpetryk/atom-spec-gutter",
+  "repository": "https://github.com/stevenpetryk/test-gutter",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "concat-stream": "^1.5.1"
   },
   "devDependencies": {
     "standard": "*"
   },
-  "activationHooks": [
-    "language-rspec:grammar-used"
-  ],
   "standard": {
     "globals": [
       "atom",
