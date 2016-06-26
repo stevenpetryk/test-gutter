@@ -13,7 +13,6 @@ apm install atom-spec-gutter
 ## Desired features
 
 * Ability to start and stop background loaders like Zeus
-* Failure details when hovering over a marker
 
 ## Help wanted
 
