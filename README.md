@@ -2,7 +2,7 @@
 
 Shows RSpec example statuses in the gutter of your editor. Inspired by Xcode.
 
-![Atom spec runner demo](http://i.imgur.com/54IMe75.gif)
+![Atom spec runner demo](video.gif)
 
 ## Installation
 
